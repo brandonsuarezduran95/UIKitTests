@@ -56,11 +56,11 @@ extension HomeViewController {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.controllers.count
+        viewModel.titles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let title = viewModel.controllers[indexPath.row].title ?? Constants.noNameTitle
+        let title = viewModel.titles[indexPath.row]
         
         // Cell
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
@@ -80,7 +80,7 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = viewModel.controllers[indexPath.row]
+        let controller = viewModel.getControllerAt(index: indexPath.row)
         navigationController?.pushViewController(controller, animated: true)
     }
 }
