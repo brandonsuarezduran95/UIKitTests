@@ -12,22 +12,32 @@ extension HomeViewController {
     struct ViewModel {
         
         let titles: [String] = [
-            "Local Notifications",
-            "Search Controller"
+            Title.localNotifications,
+            Title.searchController,
+            Title.asyncNetworkCall
         ]
         
         func getControllerAt(index position: Int) -> UIViewController {
             switch position {
             case 0:
                 return LocalNotificationsViewController()
-                
             case 1:
                 return SearchControllerViewController()
-                
+            case 2:
+                return AsyncNetworkCallViewController()
             default:
                 return UIViewController()
             }
         }
-        
+    }
+}
+
+// HomeViewController + ViewModel + Constants
+
+extension HomeViewController.ViewModel {
+    enum Title {
+        static let localNotifications = "Local Notifications"
+        static let searchController = "Search Controller"
+        static let asyncNetworkCall = "Async Network Call"
     }
 }

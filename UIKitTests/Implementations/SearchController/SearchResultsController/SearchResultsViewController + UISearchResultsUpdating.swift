@@ -12,5 +12,8 @@ extension SearchResultsViewController: UISearchResultsUpdating {
         
     }
     
+}
+
+extension SearchResultsViewController: UISearchControllerDelegate {
     
 }

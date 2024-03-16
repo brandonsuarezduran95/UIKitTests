@@ -8,6 +8,7 @@
 import UIKit
 
 extension SearchControllerViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dataSource.count
     }
@@ -25,6 +26,4 @@ extension SearchControllerViewController: UITableViewDelegate, UITableViewDataSo
         cell.contentConfiguration = content
         return cell
     }
-    
-    
 }

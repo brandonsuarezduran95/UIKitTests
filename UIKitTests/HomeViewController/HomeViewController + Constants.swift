@@ -12,7 +12,7 @@ extension HomeViewController {
     
     enum Constants {
         static let controllerTitle = "Home"
-        static let noNameTitle = "No Name"
+        static let tableTopAnchorSpacing: CGFloat = -9
     }
     
 }
