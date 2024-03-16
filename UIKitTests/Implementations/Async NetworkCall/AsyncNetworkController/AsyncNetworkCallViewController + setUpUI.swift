@@ -14,6 +14,7 @@ extension AsyncNetworkCallViewController {
         
         view.addSubview(collectionView)
         setupCollectionView()
+        setUpPlusButton()
     }
     
     func setupCollectionView() {
@@ -30,5 +31,21 @@ extension AsyncNetworkCallViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -9),
             collectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -9)
         ])
+    }
+    
+    func setUpPlusButton() {
+        let action = UIAction { [unowned self] _ in
+            let controller = StatusController()
+            
+            if let sheet = controller.sheetPresentationController {
+                sheet.detents = [.medium()]
+                sheet.prefersGrabberVisible = true
+            }
+            
+            self.present(controller, animated: true)
+        }
+        
+        let button = UIBarButtonItem(systemItem: .add, primaryAction: action)
+        navigationItem.rightBarButtonItem = button
     }
 }

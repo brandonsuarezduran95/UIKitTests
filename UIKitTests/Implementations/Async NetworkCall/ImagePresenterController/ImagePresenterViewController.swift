@@ -47,18 +47,13 @@ extension ImagePresenterViewController {
             }
             
         } else {
-            guard let url = URL(string: url) else {
+            guard let url = URL(string: url), let data = try? Data(contentsOf: url) else {
                 return
             }
             
-            Task.detached(priority: .background) {
-
-                if let data = try? Data(contentsOf: url) {
-                    DispatchQueue.main.async { [unowned self] in
-                        let image = UIImage(data: data)
-                        self.imageView.image = image
-                    }
-                }
+            DispatchQueue.main.async { [unowned self] in
+                let image = UIImage(data: data)
+                self.imageView.image = image
             }
         }
     }

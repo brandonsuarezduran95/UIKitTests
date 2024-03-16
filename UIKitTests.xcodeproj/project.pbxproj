@@ -27,6 +27,7 @@
 		99C148B92BA08023001CC926 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C148B82BA08023001CC926 /* ImageCollectionViewCell.swift */; };
 		99C148BC2BA08D29001CC926 /* ImagePresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C148BB2BA08D29001CC926 /* ImagePresenterViewController.swift */; };
 		99C148BF2BA5C5A5001CC926 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C148BE2BA5C5A5001CC926 /* CacheManager.swift */; };
+		99C148C32BA5D85F001CC926 /* AsyncNetworkCallViewController + StatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C148C22BA5D85F001CC926 /* AsyncNetworkCallViewController + StatusController.swift */; };
 		99E000B42B903C7800099656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E000B32B903C7800099656 /* AppDelegate.swift */; };
 		99E000B62B903C7800099656 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E000B52B903C7800099656 /* SceneDelegate.swift */; };
 		99E000B82B903C7800099656 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E000B72B903C7800099656 /* HomeViewController.swift */; };
@@ -69,6 +70,7 @@
 		99C148B82BA08023001CC926 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		99C148BB2BA08D29001CC926 /* ImagePresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresenterViewController.swift; sourceTree = "<group>"; };
 		99C148BE2BA5C5A5001CC926 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		99C148C22BA5D85F001CC926 /* AsyncNetworkCallViewController + StatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncNetworkCallViewController + StatusController.swift"; sourceTree = "<group>"; };
 		99E000B02B903C7800099656 /* UIKitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E000B32B903C7800099656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99E000B52B903C7800099656 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,13 +142,8 @@
 		99C148AB2B9ED9CB001CC926 /* Async NetworkCall */ = {
 			isa = PBXGroup;
 			children = (
+				99C148C02BA5D295001CC926 /* AsyncNetworkController */,
 				99C148BA2BA08D0B001CC926 /* ImagePresenterController */,
-				99C148AC2B9EDA0C001CC926 /* AsyncNetworkCallViewController.swift */,
-				99C148B02B9EE40F001CC926 /* AsyncNetworkCallViewController + ViewModel.swift */,
-				99C148B22B9EEA64001CC926 /* AsyncNetworkCallViewController + setUpUI.swift */,
-				99C148B42B9EFD5A001CC926 /* AsyncNetworkCallViewController + UICollectionViewDataSource + UICollectionViewDelegate.swift */,
-				99C148B82BA08023001CC926 /* ImageCollectionViewCell.swift */,
-				99C148B62B9EFF90001CC926 /* AsyncNetworkCallViewController + UICollectionViewDelegateFlowLayout.swift */,
 			);
 			path = "Async NetworkCall";
 			sourceTree = "<group>";
@@ -165,6 +162,28 @@
 				99C148BE2BA5C5A5001CC926 /* CacheManager.swift */,
 			);
 			path = CacheManager;
+			sourceTree = "<group>";
+		};
+		99C148C02BA5D295001CC926 /* AsyncNetworkController */ = {
+			isa = PBXGroup;
+			children = (
+				99C148C12BA5D2B2001CC926 /* CollectionViewCell */,
+				99C148AC2B9EDA0C001CC926 /* AsyncNetworkCallViewController.swift */,
+				99C148B22B9EEA64001CC926 /* AsyncNetworkCallViewController + setUpUI.swift */,
+				99C148B02B9EE40F001CC926 /* AsyncNetworkCallViewController + ViewModel.swift */,
+				99C148B42B9EFD5A001CC926 /* AsyncNetworkCallViewController + UICollectionViewDataSource + UICollectionViewDelegate.swift */,
+				99C148B62B9EFF90001CC926 /* AsyncNetworkCallViewController + UICollectionViewDelegateFlowLayout.swift */,
+				99C148C22BA5D85F001CC926 /* AsyncNetworkCallViewController + StatusController.swift */,
+			);
+			path = AsyncNetworkController;
+			sourceTree = "<group>";
+		};
+		99C148C12BA5D2B2001CC926 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				99C148B82BA08023001CC926 /* ImageCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		99E000A72B903C7800099656 = {
@@ -396,6 +415,7 @@
 				99C148B52B9EFD5A001CC926 /* AsyncNetworkCallViewController + UICollectionViewDataSource + UICollectionViewDelegate.swift in Sources */,
 				99E000B42B903C7800099656 /* AppDelegate.swift in Sources */,
 				99E000B62B903C7800099656 /* SceneDelegate.swift in Sources */,
+				99C148C32BA5D85F001CC926 /* AsyncNetworkCallViewController + StatusController.swift in Sources */,
 				996DE83C2B95394A00222D30 /* ResultsViewController + tableView.swift in Sources */,
 				996DE82A2B95213D00222D30 /* PostsModel.swift in Sources */,
 				996DE8382B95359200222D30 /* ResultsViewController.swift in Sources */,
