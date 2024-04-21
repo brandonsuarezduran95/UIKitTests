@@ -8,6 +8,9 @@
 import UIKit
 
 final class CacheManager {
+    
+    #warning("Implement safe caching with a fixed max amount of images stored")
+    
     private let imageCache = NSCache<NSString, UIImage>()
     
     static let shared = CacheManager()

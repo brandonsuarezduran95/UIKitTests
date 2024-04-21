@@ -12,20 +12,22 @@ extension ResultsViewController {
     func setupController() {
         view.backgroundColor = .systemGray6
         
-        view.addSubview(table)
+        view.addSubview(collectionView)
         setupTableView()
     }
     
     func setupTableView() {
-        table.delegate = self
-        table.dataSource = self
+        collectionView.backgroundColor = .systemGray6
+        collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "ImageCollectionViewCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
-        table.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            table.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            table.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
-            table.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            table.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            collectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
         ])
     }
     

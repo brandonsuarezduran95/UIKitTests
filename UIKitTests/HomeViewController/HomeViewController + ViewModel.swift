@@ -14,19 +14,17 @@ extension HomeViewController {
         let titles: [String] = [
             Title.localNotifications,
             Title.searchController,
-            Title.asyncNetworkCall
+            Title.asyncNetworkCall,
+            Title.uiVisualEffect
         ]
         
         func getControllerAt(index position: Int) -> UIViewController {
             switch position {
-            case 0:
-                return LocalNotificationsViewController()
-            case 1:
-                return SearchControllerViewController()
-            case 2:
-                return AsyncNetworkCallViewController()
-            default:
-                return UIViewController()
+            case 0:     return LocalNotificationsViewController()
+            case 1:     return SearchControllerViewController()
+            case 2:     return AsyncNetworkCallViewController()
+            case 3:     return UIVisualEffectViewController()
+            default:    return UIViewController()
             }
         }
     }
@@ -39,5 +37,6 @@ extension HomeViewController.ViewModel {
         static let localNotifications = "Local Notifications"
         static let searchController = "Search Controller"
         static let asyncNetworkCall = "Async Network Call"
+        static let uiVisualEffect = "UIVisualEffect"
     }
 }

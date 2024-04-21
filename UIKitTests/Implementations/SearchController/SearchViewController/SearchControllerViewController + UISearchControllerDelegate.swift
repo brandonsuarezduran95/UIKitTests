@@ -28,9 +28,7 @@ extension SearchControllerViewController: UISearchControllerDelegate {
         print("willPresentSearchController")
     }
     
-//    func presentSearchController(_ searchController: UISearchController) {
-//        let controller = UIViewController()
-//        controller.view.backgroundColor = .systemRed
-//        self.present(controller, animated: true)
-//    }
+    func presentSearchController(_ searchController: UISearchController) {
+        print("presentSearchController")
+    }
 }

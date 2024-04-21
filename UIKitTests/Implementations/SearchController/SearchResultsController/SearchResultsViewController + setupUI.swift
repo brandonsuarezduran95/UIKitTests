@@ -19,7 +19,15 @@ extension SearchResultsViewController {
     
     func setupSearchController() {
         navigationItem.searchController = searchController
+        
+        // Delegates
         searchController.searchResultsUpdater = self
+        /// -> Delegate to manage the Scope Bar
+        searchController.searchBar.delegate = self
+        
+        // Scope Bar activation - The scope bar will show handy search criteria on a segmented controller
+        searchController.scopeBarActivation = .automatic
+        
     }
     
     func setupInfoLabel() {

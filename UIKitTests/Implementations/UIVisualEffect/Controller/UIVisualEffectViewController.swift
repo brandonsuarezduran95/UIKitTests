@@ -6,26 +6,39 @@
 //
 
 import UIKit
+import Combine
 
 class UIVisualEffectViewController: UIViewController {
     
+    // UI Elements
     let imageView = UIImageView()
     let segmentedControl = UISegmentedControl(items: ["Blur Effect", "Vibrancy Effect"])
-    let notificationCenter = NotificationCenter.default
-    
     let stackView = UIStackView()
-    
     lazy var visualEffectViewA = setupBlurEffectView(style: .extraLight)
-    
     lazy var visualEffectViewB = setupBlurEffectView(style: .light)
-    
     lazy var visualEffectViewC = setupBlurEffectView(style: .dark)
     
+    // Internal properties
+    let notificationCenter = NotificationCenter.default
     var didPressShowHideButton: Bool = false
+    
+    /// Subscriber for device orientation
+    lazy private(set) var subscriber = notificationCenter
+        .publisher(for: UIDevice.orientationDidChangeNotification)
+        .compactMap { notification in
+            (notification.object as? UIDevice)?.orientation
+        }.sink { [unowned self] orientation in
+            if orientation.isPortrait && orientation != .portraitUpsideDown {
+                let image = UIImage(named: "portraitLightBulb")
+                self.imageView.image = image
+            } else {
+                let image = UIImage(named: "landscapeLightBulb")
+                self.imageView.image = image
+            }
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        subscribeToNotificationCenter()
         setupController()
     }
     
@@ -46,39 +59,19 @@ class UIVisualEffectViewController: UIViewController {
     
     deinit {
         UIDevice.current.endGeneratingDeviceOrientationNotifications()
-        notificationCenter.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
     }
 }
 
 // MARK: - Implementation
 extension UIVisualEffectViewController {
     
-    // Subscribe to Notification Center
-    func subscribeToNotificationCenter() {
-        notificationCenter.addObserver(self, selector: #selector(didChangeOrientation), name: UIDevice.orientationDidChangeNotification, object: nil)
-    }
-    
-    // Handle Orientation
-    @objc func didChangeOrientation(_ notification: Notification) {
-        print(notification)
-        if UIDevice.current.orientation.isPortrait && UIDevice.current.orientation != .portraitUpsideDown {
-            let image = UIImage(named: "portraitLightBulb")
-            imageView.image = image
-        } else {
-            let image = UIImage(named: "landscapeLightBulb")
-            imageView.image = image
-        }
-    }
-    
     // Hide/Show Effect
-    @objc func presentEffectView() {
-
-        if (didPressShowHideButton && stackView.layer.opacity == 0.0) {
-            UIView.animate(withDuration: 1) { [unowned self] in
+    @objc func toggleEffectView() {
+        
+        UIView.animate(withDuration: 1) { [unowned self] in
+            if (didPressShowHideButton && stackView.layer.opacity == 0.0) {
                 self.stackView.layer.opacity = 1.0
-            }
-        } else  {
-            UIView.animate(withDuration: 1) { [unowned self] in
+            } else  {
                 self.stackView.layer.opacity = 0.0
             }
         }
@@ -102,6 +95,8 @@ extension UIVisualEffectViewController {
         
         guard let viewController = controller else { return }
         self.present(viewController, animated: true)
+        
+        
     }
     
     @MainActor
@@ -116,9 +111,9 @@ extension UIVisualEffectViewController {
     @MainActor
     func handleVibrancyControlSection() {
         removeArrangeSubViews()
-        visualEffectViewA = setupVibrancyEffectView(blurEffect: .light, style: .fill)
-        visualEffectViewB = setupVibrancyEffectView(blurEffect: .extraLight, style: .label)
-        visualEffectViewC = setupVibrancyEffectView(blurEffect: .dark, style: .secondaryFill)
+        visualEffectViewA = setupVibrancyEffectView(blur: .systemMaterial, style: .fill)
+        visualEffectViewB = setupVibrancyEffectView(blur: .systemMaterial, style: .label)
+        visualEffectViewC = setupVibrancyEffectView(blur: .systemMaterial, style: .tertiaryLabel)
         addArrangeSubviews()
     }
     
