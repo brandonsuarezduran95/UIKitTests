@@ -23,22 +23,11 @@ class UIVisualEffectViewController: UIViewController {
     var didPressShowHideButton: Bool = false
     
     /// Subscriber for device orientation
-    lazy private(set) var subscriber = notificationCenter
-        .publisher(for: UIDevice.orientationDidChangeNotification)
-        .compactMap { notification in
-            (notification.object as? UIDevice)?.orientation
-        }.sink { [unowned self] orientation in
-            if orientation.isPortrait && orientation != .portraitUpsideDown {
-                let image = UIImage(named: "portraitLightBulb")
-                self.imageView.image = image
-            } else {
-                let image = UIImage(named: "landscapeLightBulb")
-                self.imageView.image = image
-            }
-        }
+    var subscriber: AnyCancellable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSubscriber()
         setupController()
     }
     
@@ -58,12 +47,32 @@ class UIVisualEffectViewController: UIViewController {
     }
     
     deinit {
+        notificationCenter.removeObserver(self)
         UIDevice.current.endGeneratingDeviceOrientationNotifications()
+        subscriber?.cancel()
     }
 }
 
 // MARK: - Implementation
 extension UIVisualEffectViewController {
+    
+    // Receive Orientation values from the NotificationCenter Publisher
+    func setupSubscriber() {
+        subscriber = notificationCenter
+            .publisher(for: UIDevice.orientationDidChangeNotification)
+            .receive(on: RunLoop.main)
+            .compactMap{ notification in
+                return (notification.object as? UIDevice)?.orientation
+            }.sink { [unowned self] orientation in
+                    if orientation.isPortrait && orientation != .portraitUpsideDown {
+                        let image = UIImage(named: "portraitLightBulb")
+                        self.imageView.image = image
+                    } else {
+                        let image = UIImage(named: "landscapeLightBulb")
+                        self.imageView.image = image
+                    }
+            }
+    }
     
     // Hide/Show Effect
     @objc func toggleEffectView() {
@@ -95,8 +104,6 @@ extension UIVisualEffectViewController {
         
         guard let viewController = controller else { return }
         self.present(viewController, animated: true)
-        
-        
     }
     
     @MainActor
