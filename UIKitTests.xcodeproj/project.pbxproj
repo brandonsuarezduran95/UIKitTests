@@ -16,6 +16,8 @@
 		996DE8352B952FD900222D30 /* SearchResultsViewController + setupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8342B952FD900222D30 /* SearchResultsViewController + setupUI.swift */; };
 		996DE8382B95359200222D30 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8372B95359200222D30 /* ResultsViewController.swift */; };
 		996DE83A2B95392400222D30 /* ResultsViewController + setupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8392B95392400222D30 /* ResultsViewController + setupUI.swift */; };
+		99A7F1632CB3187100A6BC7D /* ResponderChainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A7F1622CB3187100A6BC7D /* ResponderChainController.swift */; };
+		99A7F1652CB318C100A6BC7D /* ResponderChainController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A7F1642CB318C100A6BC7D /* ResponderChainController + UI.swift */; };
 		99C148AA2B9E6262001CC926 /* SearchControllerViewController + UISearchControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C148A92B9E6262001CC926 /* SearchControllerViewController + UISearchControllerDelegate.swift */; };
 		99C148AD2B9EDA0C001CC926 /* AsyncNetworkCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C148AC2B9EDA0C001CC926 /* AsyncNetworkCallViewController.swift */; };
 		99C148AF2B9EDEFE001CC926 /* UnSplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C148AE2B9EDEFE001CC926 /* UnSplashModel.swift */; };
@@ -71,6 +73,8 @@
 		996DE8342B952FD900222D30 /* SearchResultsViewController + setupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResultsViewController + setupUI.swift"; sourceTree = "<group>"; };
 		996DE8372B95359200222D30 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		996DE8392B95392400222D30 /* ResultsViewController + setupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultsViewController + setupUI.swift"; sourceTree = "<group>"; };
+		99A7F1622CB3187100A6BC7D /* ResponderChainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderChainController.swift; sourceTree = "<group>"; };
+		99A7F1642CB318C100A6BC7D /* ResponderChainController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponderChainController + UI.swift"; sourceTree = "<group>"; };
 		99C148A92B9E6262001CC926 /* SearchControllerViewController + UISearchControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchControllerViewController + UISearchControllerDelegate.swift"; sourceTree = "<group>"; };
 		99C148AC2B9EDA0C001CC926 /* AsyncNetworkCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncNetworkCallViewController.swift; sourceTree = "<group>"; };
 		99C148AE2B9EDEFE001CC926 /* UnSplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnSplashModel.swift; sourceTree = "<group>"; };
@@ -165,6 +169,31 @@
 				99C148D02BAB913A001CC926 /* ResultsViewController + UICollectionViewDelegateFlowLayout.swift */,
 			);
 			path = ResultsController;
+			sourceTree = "<group>";
+		};
+		99A7F15F2CB3181600A6BC7D /* ResponderChain */ = {
+			isa = PBXGroup;
+			children = (
+				99A7F1612CB3184B00A6BC7D /* View */,
+				99A7F1602CB3184300A6BC7D /* Controller */,
+			);
+			path = ResponderChain;
+			sourceTree = "<group>";
+		};
+		99A7F1602CB3184300A6BC7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				99A7F1622CB3187100A6BC7D /* ResponderChainController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		99A7F1612CB3184B00A6BC7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99A7F1642CB318C100A6BC7D /* ResponderChainController + UI.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		99C148AB2B9ED9CB001CC926 /* Async NetworkCall */ = {
@@ -333,6 +362,7 @@
 		99E000D12B90441E00099656 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				99A7F15F2CB3181600A6BC7D /* ResponderChain */,
 				99C3B01A2BCA1E6000204150 /* UIVisualEffect */,
 				99C148AB2B9ED9CB001CC926 /* Async NetworkCall */,
 				99E000DF2B939A4B00099656 /* SearchController */,
@@ -492,6 +522,7 @@
 				99E000E12B939A8200099656 /* SearchControllerViewController.swift in Sources */,
 				99C148AA2B9E6262001CC926 /* SearchControllerViewController + UISearchControllerDelegate.swift in Sources */,
 				99E000CB2B90409700099656 /* LocalNotificationsViewController.swift in Sources */,
+				99A7F1632CB3187100A6BC7D /* ResponderChainController.swift in Sources */,
 				99C3B0242BCA6B9600204150 /* SheetViewController + UI.swift in Sources */,
 				996DE8332B952F7D00222D30 /* SearchResultsViewController + UISearchResultsUpdating.swift in Sources */,
 				99C148B52B9EFD5A001CC926 /* AsyncNetworkCallViewController + UICollectionViewDataSource + UICollectionViewDelegate.swift in Sources */,
@@ -506,6 +537,7 @@
 				99C148BC2BA08D29001CC926 /* ImagePresenterViewController.swift in Sources */,
 				99E000CF2B90438C00099656 /* HomeViewController + Constants.swift in Sources */,
 				99C148C92BA71796001CC926 /* SearchResultsViewController + UISearchBarDelegate.swift in Sources */,
+				99A7F1652CB318C100A6BC7D /* ResponderChainController + UI.swift in Sources */,
 				996DE83A2B95392400222D30 /* ResultsViewController + setupUI.swift in Sources */,
 				99C148CD2BA8E34A001CC926 /* SearchResultsViewController + ViewModel.swift in Sources */,
 				99C148CB2BA79B86001CC926 /* UnSplashSearchModel.swift in Sources */,

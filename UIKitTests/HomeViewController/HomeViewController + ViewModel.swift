@@ -15,7 +15,8 @@ extension HomeViewController {
             Title.localNotifications,
             Title.searchController,
             Title.asyncNetworkCall,
-            Title.uiVisualEffect
+            Title.uiVisualEffect,
+            Title.responderChain
         ]
         
         func getControllerAt(index position: Int) -> UIViewController {
@@ -24,6 +25,7 @@ extension HomeViewController {
             case 1:     return SearchControllerViewController()
             case 2:     return AsyncNetworkCallViewController()
             case 3:     return UIVisualEffectViewController()
+            case 4:     return ResponderChainController()
             default:    return UIViewController()
             }
         }
@@ -38,5 +40,6 @@ extension HomeViewController.ViewModel {
         static let searchController = "Search Controller"
         static let asyncNetworkCall = "Async Network Call"
         static let uiVisualEffect = "UIVisualEffect"
+        static let responderChain = "Responder Chain"
     }
 }
