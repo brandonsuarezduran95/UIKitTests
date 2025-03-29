@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990295752D264C6600EB1785 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990295742D264C6600EB1785 /* TableViewController.swift */; };
+		990295772D264DA600EB1785 /* TableViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990295762D264DA600EB1785 /* TableViewController + UI.swift */; };
+		990295792D264EBC00EB1785 /* TableViewController + UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990295782D264EBC00EB1785 /* TableViewController + UITableViewDelegate.swift */; };
+		9902957B2D264F0200EB1785 /* TableViewController + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902957A2D264F0200EB1785 /* TableViewController + UITableViewDataSource.swift */; };
+		9902957E2D26D96500EB1785 /* StylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902957D2D26D96500EB1785 /* StylesTableViewController.swift */; };
 		996DE8262B95180B00222D30 /* SearchControllerViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8252B95180B00222D30 /* SearchControllerViewController + TableView.swift */; };
 		996DE8282B9518A300222D30 /* SearchControllerViewController + ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8272B9518A300222D30 /* SearchControllerViewController + ViewModel.swift */; };
 		996DE82A2B95213D00222D30 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8292B95213D00222D30 /* PostsModel.swift */; };
@@ -16,6 +21,9 @@
 		996DE8352B952FD900222D30 /* SearchResultsViewController + setupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8342B952FD900222D30 /* SearchResultsViewController + setupUI.swift */; };
 		996DE8382B95359200222D30 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8372B95359200222D30 /* ResultsViewController.swift */; };
 		996DE83A2B95392400222D30 /* ResultsViewController + setupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DE8392B95392400222D30 /* ResultsViewController + setupUI.swift */; };
+		997615CC2D17DEC700DCDC1C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997615CB2D17DEC700DCDC1C /* UserNotifications.framework */; };
+		997615CE2D17DEC700DCDC1C /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997615CD2D17DEC700DCDC1C /* UserNotificationsUI.framework */; };
+		997615D82D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 997615C92D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		99A7F1632CB3187100A6BC7D /* ResponderChainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A7F1622CB3187100A6BC7D /* ResponderChainController.swift */; };
 		99A7F1652CB318C100A6BC7D /* ResponderChainController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A7F1642CB318C100A6BC7D /* ResponderChainController + UI.swift */; };
 		99C148AA2B9E6262001CC926 /* SearchControllerViewController + UISearchControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C148A92B9E6262001CC926 /* SearchControllerViewController + UISearchControllerDelegate.swift */; };
@@ -63,7 +71,36 @@
 		99E000EE2B93D84500099656 /* TodosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E000ED2B93D84500099656 /* TodosModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		997615D62D17DEC700DCDC1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99E000A82B903C7800099656 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 997615C82D17DEC700DCDC1C;
+			remoteInfo = UIKitTestsLocalNotificationUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		997615D92D17DEC700DCDC1C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				997615D82D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		990295742D264C6600EB1785 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		990295762D264DA600EB1785 /* TableViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController + UI.swift"; sourceTree = "<group>"; };
+		990295782D264EBC00EB1785 /* TableViewController + UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController + UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		9902957A2D264F0200EB1785 /* TableViewController + UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController + UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		9902957D2D26D96500EB1785 /* StylesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylesTableViewController.swift; sourceTree = "<group>"; };
 		996DE8252B95180B00222D30 /* SearchControllerViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchControllerViewController + TableView.swift"; sourceTree = "<group>"; };
 		996DE8272B9518A300222D30 /* SearchControllerViewController + ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchControllerViewController + ViewModel.swift"; sourceTree = "<group>"; };
 		996DE8292B95213D00222D30 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
@@ -73,6 +110,9 @@
 		996DE8342B952FD900222D30 /* SearchResultsViewController + setupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResultsViewController + setupUI.swift"; sourceTree = "<group>"; };
 		996DE8372B95359200222D30 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		996DE8392B95392400222D30 /* ResultsViewController + setupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultsViewController + setupUI.swift"; sourceTree = "<group>"; };
+		997615C92D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UIKitTestsLocalNotificationUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		997615CB2D17DEC700DCDC1C /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		997615CD2D17DEC700DCDC1C /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		99A7F1622CB3187100A6BC7D /* ResponderChainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderChainController.swift; sourceTree = "<group>"; };
 		99A7F1642CB318C100A6BC7D /* ResponderChainController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponderChainController + UI.swift"; sourceTree = "<group>"; };
 		99C148A92B9E6262001CC926 /* SearchControllerViewController + UISearchControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchControllerViewController + UISearchControllerDelegate.swift"; sourceTree = "<group>"; };
@@ -122,7 +162,30 @@
 		99E000ED2B93D84500099656 /* TodosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		997615DC2D17DEC700DCDC1C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 997615C82D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		997615CF2D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (997615DC2D17DEC700DCDC1C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = UIKitTestsLocalNotificationUI; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		997615C62D17DEC700DCDC1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				997615CE2D17DEC700DCDC1C /* UserNotificationsUI.framework in Frameworks */,
+				997615CC2D17DEC700DCDC1C /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99E000AD2B903C7800099656 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +196,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		990295712D264C4300EB1785 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				990295732D264C5100EB1785 /* Controller */,
+				990295722D264C4C00EB1785 /* View */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		990295722D264C4C00EB1785 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				990295762D264DA600EB1785 /* TableViewController + UI.swift */,
+				990295782D264EBC00EB1785 /* TableViewController + UITableViewDelegate.swift */,
+				9902957A2D264F0200EB1785 /* TableViewController + UITableViewDataSource.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		990295732D264C5100EB1785 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9902957C2D26D94300EB1785 /* SubControllers */,
+				990295742D264C6600EB1785 /* TableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9902957C2D26D94300EB1785 /* SubControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9902957D2D26D96500EB1785 /* StylesTableViewController.swift */,
+			);
+			path = SubControllers;
+			sourceTree = "<group>";
+		};
 		996DE82D2B952E6600222D30 /* SearchResultsController */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +268,15 @@
 				99C148D02BAB913A001CC926 /* ResultsViewController + UICollectionViewDelegateFlowLayout.swift */,
 			);
 			path = ResultsController;
+			sourceTree = "<group>";
+		};
+		997615CA2D17DEC700DCDC1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				997615CB2D17DEC700DCDC1C /* UserNotifications.framework */,
+				997615CD2D17DEC700DCDC1C /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		99A7F15F2CB3181600A6BC7D /* ResponderChain */ = {
@@ -292,6 +400,8 @@
 			isa = PBXGroup;
 			children = (
 				99E000B22B903C7800099656 /* UIKitTests */,
+				997615CF2D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI */,
+				997615CA2D17DEC700DCDC1C /* Frameworks */,
 				99E000B12B903C7800099656 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -300,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				99E000B02B903C7800099656 /* UIKitTests.app */,
+				997615C92D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,6 +473,7 @@
 		99E000D12B90441E00099656 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				990295712D264C4300EB1785 /* TableView */,
 				99A7F15F2CB3181600A6BC7D /* ResponderChain */,
 				99C3B01A2BCA1E6000204150 /* UIVisualEffect */,
 				99C148AB2B9ED9CB001CC926 /* Async NetworkCall */,
@@ -430,6 +542,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		997615C82D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 997615DD2D17DEC700DCDC1C /* Build configuration list for PBXNativeTarget "UIKitTestsLocalNotificationUI" */;
+			buildPhases = (
+				997615C52D17DEC700DCDC1C /* Sources */,
+				997615C62D17DEC700DCDC1C /* Frameworks */,
+				997615C72D17DEC700DCDC1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				997615CF2D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI */,
+			);
+			name = UIKitTestsLocalNotificationUI;
+			packageProductDependencies = (
+			);
+			productName = UIKitTestsLocalNotificationUI;
+			productReference = 997615C92D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		99E000AF2B903C7800099656 /* UIKitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99E000C42B903C7A00099656 /* Build configuration list for PBXNativeTarget "UIKitTests" */;
@@ -437,10 +571,12 @@
 				99E000AC2B903C7800099656 /* Sources */,
 				99E000AD2B903C7800099656 /* Frameworks */,
 				99E000AE2B903C7800099656 /* Resources */,
+				997615D92D17DEC700DCDC1C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				997615D72D17DEC700DCDC1C /* PBXTargetDependency */,
 			);
 			name = UIKitTests;
 			productName = UIKitTests;
@@ -454,9 +590,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					997615C82D17DEC700DCDC1C = {
+						CreatedOnToolsVersion = 16.1;
+					};
 					99E000AF2B903C7800099656 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -476,11 +615,19 @@
 			projectRoot = "";
 			targets = (
 				99E000AF2B903C7800099656 /* UIKitTests */,
+				997615C82D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		997615C72D17DEC700DCDC1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99E000AE2B903C7800099656 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,13 +640,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		997615C52D17DEC700DCDC1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99E000AC2B903C7800099656 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				99E000EE2B93D84500099656 /* TodosModel.swift in Sources */,
 				996DE8282B9518A300222D30 /* SearchControllerViewController + ViewModel.swift in Sources */,
+				990295792D264EBC00EB1785 /* TableViewController + UITableViewDelegate.swift in Sources */,
 				99C3B02E2BD370E200204150 /* UIVisualEffectViewController + Vibrancy Effect.swift in Sources */,
+				990295772D264DA600EB1785 /* TableViewController + UI.swift in Sources */,
 				996DE82C2B952E0E00222D30 /* SearchControllerViewController + setupUI.swift in Sources */,
 				996DE82F2B952EDC00222D30 /* SearchResultsViewController.swift in Sources */,
 				99C148C72BA71653001CC926 /* SearchResultsViewController + UISearchControllerDelegate.swift in Sources */,
@@ -508,6 +664,7 @@
 				99E000EB2B93D79C00099656 /* NetworkError.swift in Sources */,
 				99C148B72B9EFF90001CC926 /* AsyncNetworkCallViewController + UICollectionViewDelegateFlowLayout.swift in Sources */,
 				99C148B32B9EEA64001CC926 /* AsyncNetworkCallViewController + setUpUI.swift in Sources */,
+				9902957E2D26D96500EB1785 /* StylesTableViewController.swift in Sources */,
 				99C3B01E2BCA1F4100204150 /* UIVisualEffectViewController + UI.swift in Sources */,
 				99E000D52B92C54900099656 /* LocalNotificationsViewController + setUpUI.swift in Sources */,
 				996DE8352B952FD900222D30 /* SearchResultsViewController + setupUI.swift in Sources */,
@@ -521,10 +678,12 @@
 				99C148BF2BA5C5A5001CC926 /* CacheManager.swift in Sources */,
 				99E000E12B939A8200099656 /* SearchControllerViewController.swift in Sources */,
 				99C148AA2B9E6262001CC926 /* SearchControllerViewController + UISearchControllerDelegate.swift in Sources */,
+				9902957B2D264F0200EB1785 /* TableViewController + UITableViewDataSource.swift in Sources */,
 				99E000CB2B90409700099656 /* LocalNotificationsViewController.swift in Sources */,
 				99A7F1632CB3187100A6BC7D /* ResponderChainController.swift in Sources */,
 				99C3B0242BCA6B9600204150 /* SheetViewController + UI.swift in Sources */,
 				996DE8332B952F7D00222D30 /* SearchResultsViewController + UISearchResultsUpdating.swift in Sources */,
+				990295752D264C6600EB1785 /* TableViewController.swift in Sources */,
 				99C148B52B9EFD5A001CC926 /* AsyncNetworkCallViewController + UICollectionViewDataSource + UICollectionViewDelegate.swift in Sources */,
 				99E000B42B903C7800099656 /* AppDelegate.swift in Sources */,
 				99E000B62B903C7800099656 /* SceneDelegate.swift in Sources */,
@@ -554,6 +713,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		997615D72D17DEC700DCDC1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 997615C82D17DEC700DCDC1C /* UIKitTestsLocalNotificationUI */;
+			targetProxy = 997615D62D17DEC700DCDC1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		99E000BE2B903C7A00099656 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -566,6 +733,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		997615DA2D17DEC700DCDC1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DPK379U73T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UIKitTestsLocalNotificationUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UIKitTestsLocalNotificationUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brandon-suarez.UIKitTests.UIKitTestsLocalNotificationUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		997615DB2D17DEC700DCDC1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DPK379U73T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UIKitTestsLocalNotificationUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UIKitTestsLocalNotificationUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brandon-suarez.UIKitTests.UIKitTestsLocalNotificationUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		99E000C22B903C7A00099656 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -742,6 +961,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		997615DD2D17DEC700DCDC1C /* Build configuration list for PBXNativeTarget "UIKitTestsLocalNotificationUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				997615DA2D17DEC700DCDC1C /* Debug */,
+				997615DB2D17DEC700DCDC1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		99E000AB2B903C7800099656 /* Build configuration list for PBXProject "UIKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

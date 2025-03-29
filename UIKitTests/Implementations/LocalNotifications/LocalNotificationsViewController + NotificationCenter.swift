@@ -29,8 +29,6 @@ extension LocalNotificationsViewController {
             self.status = "Ephemeral"
         @unknown default:
             self.status = "@unknown"
-
         }
-
     }
 }
